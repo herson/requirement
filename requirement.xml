@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="2.5.0" method="upgrade">
  
-        <name>Requirement</name>
-        <alias>Legal Requirements</alias>
+        <name>COM_REQUIREMENT</name>
         <!-- The following elements are optional and free of formatting constraints -->
         <creationDate>November 2012</creationDate>
         <author>Herson Cruz</author>
@@ -11,9 +10,9 @@
         <copyright>Copyright Info</copyright>
         <license>License Info</license>
         <!--  The version string is recorded in the components table -->
-        <version>0.0.6</version>
+        <version>0.0.9</version>
         <!-- The description is optional and defaults to the name -->
-        <description>Legal requirements component for ITEC ...</description>
+        <description>COM_REQUIREMENT_DESCRIPTION</description>
  
         <install> <!-- Runs on install -->
                 <sql>
@@ -41,11 +40,12 @@
                 <filename>controller.php</filename>
                 <folder>views</folder>
                 <folder>models</folder>
+                <folder>language</folder>
         </files>
  
         <administration>
                 <!-- Administration Menu Section -->
-                <menu>Requirement</menu>
+                <menu>COM_REQUIREMENT_MENU</menu>
                 <!-- Administration Main File Copy Section -->
                 <!-- Note the folder attribute: This attribute describes the folder
                         to copy FROM in the package to install therefore files copied
@@ -54,13 +54,24 @@
                         <!-- Admin Main File Copy Section -->
                         <filename>index.html</filename>
                         <filename>requirement.php</filename>
+                        <filename>controller.php</filename>
                         <!-- SQL files section -->
                         <folder>sql</folder>
                         <!-- tables files section -->
                         <folder>tables</folder>
                         <!-- models files section -->
                         <folder>models</folder>
+                        <!-- views files section -->
+                        <folder>views</folder>
+                        <!-- controllers files section -->
+                        <folder>controllers</folder>
                 </files>
+                <languages folder="admin">
+                        <language tag="en-GB">language/en-GB/en-GB.com_requirement.ini</language>
+                        <language tag="en-GB">language/en-GB/en-GB.com_requirement.sys.ini</language>
+                        <language tag="es-ES">language/es-ES/es-ES.com_requirement.ini</language>
+                        <language tag="es-ES">language/es-ES/es-ES.com_requirement.sys.ini</language>
+                </languages>
         </administration>
  
 </extension>
